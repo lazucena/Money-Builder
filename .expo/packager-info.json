@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 1040,
+  "expoServerNgrokUrl": "https://nu-qs4.anonymous.money-builder.exp.direct",
+  "packagerNgrokUrl": "https://packager.nu-qs4.anonymous.money-builder.exp.direct",
+  "ngrokPid": 11212,
   "webpackServerPort": null
 }
