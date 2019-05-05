@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Alert, TextInput} from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, withTheme } from 'react-native-elements';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,11 +20,13 @@ export default class App extends React.Component {
                 onChangeText = { (loginText) => this.setState({loginText}) }
                 value = { this.state.loginText }
                 placeholder = {'Username'}
+                style = {styles.userText}
             />
             <TextInput
                 onChangeText = { (passText) => this.setState({passText}) }
                 value = { this.state.passText }
                 placeholder = {'Password'}
+                style = {styles.passText}
             />
             <Button onPress={() => { Alert.alert('You tapped the button!');}}
               title="Login" type="outline" titleStyle={{color: 'white'}} buttonStyle={{borderColor: 'white', width: 250, marginTop: -50, alignSelf: 'center'}}/>
@@ -60,5 +62,15 @@ const styles = StyleSheet.create({
     lineHeight: 350,
     fontWeight: 'bold',
   },
+  userText: {
+    alignSelf: 'center',
+    borderColor: 'white',
+    borderWidth: 5,
+  },
+  passText: {
+    alignSelf: 'center',
+    borderColor: 'white',
+    borderWidth: 5,
+  }
 
 });
