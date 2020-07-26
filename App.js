@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
-import {
-  AppRegistry
-} from 'react-native';
+import React,  { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import Login from './Screens/Login';
+import Home from './Screens/Home';
 
-import Login from './screens/Login';
-import Home from './screens/Home';
 
 export default class App extends Component {
   state = {
-    isLoggedIn: false
+    isLoggedIn: true
   }
 
   render() {
-
     if (this.state.isLoggedIn) {
-      return <Home/>;        
+      return <Home/>
     }
     else {
       return <Login/>;

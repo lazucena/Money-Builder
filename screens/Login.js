@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Alert, TextInput} from 'react-native';
-import { Button, withTheme } from 'react-native-elements';
+import { Button } from 'react-native-elements';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,17 +20,19 @@ export default class App extends React.Component {
                 onChangeText = { (loginText) => this.setState({loginText}) }
                 value = { this.state.loginText }
                 placeholder = {'Username'}
+                textAlign = {'center'}
                 style = {styles.userText}
             />
             <TextInput
                 onChangeText = { (passText) => this.setState({passText}) }
                 value = { this.state.passText }
                 placeholder = {'Password'}
+                textAlign = {'center'}
                 style = {styles.passText}
             />
             <Button onPress={() => { Alert.alert('You tapped the button!');}}
-              title="Login" type="outline" titleStyle={{color: 'white'}} buttonStyle={{borderColor: 'white', width: 250, marginTop: -50, alignSelf: 'center'}}/>
-            <Button title="Create Account" type="outline" titleStyle={{color: 'white'}} buttonStyle={{borderColor: 'white', width: 250, marginTop: 50, alignSelf: 'center'}}/>
+              title="Login" type="outline" titleStyle={{color: 'white'}} buttonStyle={{borderColor: 'white', width: 250, marginTop: -25, alignSelf: 'center'}}/>
+            <Button title="Create Account" type="outline" titleStyle={{color: 'white'}} buttonStyle={{borderColor: 'white', width: 250, marginTop: 15, alignSelf: 'center'}}/>
           </View>
         </ImageBackground>
       </View>
@@ -65,12 +67,22 @@ const styles = StyleSheet.create({
   userText: {
     alignSelf: 'center',
     borderColor: 'white',
-    borderWidth: 5,
+    borderWidth: 1,
+    marginTop: -75,
+    marginBottom: 75,
+    width: 250,
+    height: 50,
+    color: '#fff',
   },
   passText: {
     alignSelf: 'center',
     borderColor: 'white',
-    borderWidth: 5,
+    borderWidth: 1,
+    marginTop: -50,
+    marginBottom: 75,
+    width: 250,
+    height: 50,
+    color: '#fff',
   }
 
 });
